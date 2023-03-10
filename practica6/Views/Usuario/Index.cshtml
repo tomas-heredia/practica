@@ -1,0 +1,32 @@
+@model ViewModels.Usuario_IndexViewModel
+
+@{
+    ViewData["Title"] = "Usuario Page";
+}
+
+<div>
+     <form asp-controller="Usuario" asp-action= "addUsuario" method="post">
+        <legend>"Registrar Usuario"</legend>
+        <div class="form-group">
+            <label asp-for="NombreUsuario" class="control-label"></label>
+            <input asp-for="NombreUsuario" class="form-control">
+            <span asp-validation-for="NombreUsuario" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="IdUsuario" class="control-label"></label>
+            <input asp-for="IdUsuario" class="form-control">
+            <span asp-validation-for="IdUsuario" class="text-danger"></span>
+        </div>
+       
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Ingresar" class="btn btn-info" />
+        </div>
+    </form>
+    <form asp-controller="Usuario" asp-action= "AHome" method="post">
+        
+        <input  class="btn btn-danger" type="submit" value="Home">
+            
+    </form>
+
+</div>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

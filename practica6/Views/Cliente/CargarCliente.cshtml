@@ -1,0 +1,46 @@
+@model ViewModels.Cliente_CargarViewModel
+
+@{
+    ViewData["Title"] = "Cliente Page";
+}
+
+<div>
+     <form asp-controller="Cliente" asp-action= "addCliente" method="post">
+        <legend>"Registrar Cliente"</legend>
+        <div class="form-group">
+            <label asp-for="Nombre" class="control-label"></label>
+            <input asp-for="Nombre" class="form-control">
+            <span asp-validation-for="Nombre" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Apellido" class="control-label"></label>
+            <input asp-for="Apellido" class="form-control">
+            <span asp-validation-for="Apellido" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="FechaDeNacimiento" class="control-label"></label>
+            <input asp-for="FechaDeNacimiento" class="form-control">
+            <span asp-validation-for="FechaDeNacimiento" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Direccion" class="control-label"></label>
+            <input asp-for="Direccion" class="form-control">
+            <span asp-validation-for="Direccion" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Telefono" class="control-label"></label>
+            <input asp-for="Telefono" class="form-control">
+            <span asp-validation-for="Telefono" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Guardar" class="btn btn-info" />
+        </div>
+    </form>
+    <form asp-controller="Cliente" asp-action= "AHome" method="post">
+        
+        <input  class="btn btn-danger" type="submit" value="Home">
+            
+    </form>
+
+</div>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

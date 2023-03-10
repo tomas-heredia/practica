@@ -1,0 +1,51 @@
+@model List<ViewModels.Cliente_IndexViewModel> 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Direccion</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Fecha de nacimiento</th>
+
+      <th scope="col">Borrar</th>
+      <th scope="col">Modificar</th>
+    </tr>
+  </thead>
+@foreach (var item in Model)
+{
+  <tbody>
+    <tr>
+      <td scope="row">@item.IdCliente</td>
+      <td>@item.Nombre</td>
+      <td>@item.Apellido</td>
+      <td>@item.Direccion</td>
+      <td>@item.Telefono</td>
+      <td>@item.FechaDeNacimiento</td>
+
+      <td>
+        <form asp-controller="Cliente" asp-action= "bajaCliente" method="post">
+            <input type="number" value=@item.IdCliente name="id" hidden>
+            <input  class="btn btn-danger" type="submit" value="Eliminar">
+            
+        </form>
+      </td>
+      <td>
+        <form asp-controller="Cliente" asp-action= "ModificarCliente" method="post">
+            <input type="number" value=@item.IdCliente name="id" hidden>
+            <input  class="btn btn-danger" type="submit" value="Modificar">
+            
+        </form>
+      </td>
+    </tr>
+   
+  </tbody>
+    
+}
+</table>
+    <form asp-controller="Cliente" asp-action= "AHome" method="post">
+        
+        <input  class="btn btn-danger" type="submit" value="Home">
+            
+    </form>

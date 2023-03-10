@@ -1,0 +1,52 @@
+
+
+@model ViewModels.Cliente_ModificarViewModel
+
+@{
+    ViewData["Title"] = "Cliente Page";
+}
+
+<div >
+    <form asp-controller="Cliente" asp-action= "Actualizar" method="post">
+
+        <legend>"Modificar Cliente"</legend>
+        
+        <div class="form-group">
+            <label asp-for="@Model.Nombre" class="control-label"></label>
+            <input asp-for="@Model.Nombre" class="form-control">
+            <span asp-validation-for="@Model.Nombre" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Apellido" class="control-label"></label>
+            <input asp-for="@Model.Apellido" class="form-control">
+            <span asp-validation-for="@Model.Apellido" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.FechaDeNacimiento" class="control-label"></label>
+            <input asp-for="@Model.FechaDeNacimiento" class="form-control">
+            <span asp-validation-for="@Model.FechaDeNacimiento" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Direccion" class="control-label"></label>
+            <input asp-for="@Model.Direccion" class="form-control">
+            <span asp-validation-for="@Model.Direccion" class="text-danger"></span>
+        </div>
+         <div class="form-group">
+            <label asp-for="@Model.Telefono" class="control-label"></label>
+            <input asp-for="@Model.Telefono" class="form-control">
+            <span asp-validation-for="@Model.Telefono" class="text-danger"></span>
+
+         
+        <div class="form-group">
+             <input type="number" value=@Model.IdCliente name="IdCliente" hidden>
+            <input class="btn btn-primary" type="submit" value="Guardar" class="btn btn-info" />
+        </div>
+        
+    </form>
+        <form asp-controller="Cliente" asp-action= "AHome" method="post">
+        
+        <input  class="btn btn-danger" type="submit" value="Home">
+            
+    </form>
+</div>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }
