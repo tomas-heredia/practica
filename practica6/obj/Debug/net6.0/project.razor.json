@@ -18414,6 +18414,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\2docuat\\taller 2\\practica6\\practica\\practica6\\Views\\Cliente\\Activos_Inactivos.cshtml",
+      "TargetPath": "Views\\Cliente\\Activos_Inactivos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\2docuat\\taller 2\\practica6\\practica\\practica6\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"

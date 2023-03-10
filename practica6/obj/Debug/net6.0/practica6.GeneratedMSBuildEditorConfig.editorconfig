@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\2docuat\taller 2\practica6\practica\practica6
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/2docuat/taller 2/practica6/practica/practica6/Views/Cliente/Activos_Inactivos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxBY3Rpdm9zX0luYWN0aXZvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/2docuat/taller 2/practica6/practica/practica6/Views/Cliente/CargarCliente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDYXJnYXJDbGllbnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

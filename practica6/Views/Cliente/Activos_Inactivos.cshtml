@@ -1,0 +1,27 @@
+@model ViewModels.Cliente_Activos_InactivosViewModel
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Activos</th>
+      <th scope="col">Inactivos</th>
+
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td scope="row">@Model.Activos</td>
+      <td>@Model.Inactivos</td>
+
+    </tr>
+   
+  </tbody>
+    
+
+</table>
+    <form asp-controller="Cliente" asp-action= "AHome" method="post">
+        
+        <input  class="btn btn-danger" type="submit" value="Home">
+            
+    </form>

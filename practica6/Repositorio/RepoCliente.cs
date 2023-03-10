@@ -133,7 +133,38 @@ namespace Repo
                 return nuevoCliente;
                 }
         }
-        
+        public int ClientesActivos(){
+            using (SqliteConnection conexion = new SqliteConnection(connectionString)) 
+                {
+                    var Activos = 0;
+                    conexion.Open();
+                    SqliteCommand select = new SqliteCommand("SELECT * FROM Clientes where Activo == 1 ", conexion);
+                    
+                    var query = select.ExecuteReader();
+                    while (query.Read())
+                    {
+                        Activos ++;
+                      }   
+                    conexion.Close();
+                    return Activos;
+                    }
+        }
+        public int ClientesInactivos(){
+            using (SqliteConnection conexion = new SqliteConnection(connectionString)) 
+                {
+                    var Inactivos = 0;
+                    conexion.Open();
+                    SqliteCommand select = new SqliteCommand("SELECT * FROM Clientes where Activo == 0 ", conexion);
+                    
+                    var query = select.ExecuteReader();
+                    while (query.Read())
+                    {
+                        Inactivos ++;
+                      }   
+                    conexion.Close();
+                    return Inactivos;
+                    }
+        }
         
     }
 }

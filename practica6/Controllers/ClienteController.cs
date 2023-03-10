@@ -200,6 +200,31 @@ namespace practica.Controllers
 
             
         }
+        [HttpPost]
+        public IActionResult Activos_Inactivos(){
+            
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString(UsuarioController.Usuario_UserName)) 
+                && string.IsNullOrEmpty(HttpContext.Session.GetString(UsuarioController.Usuario_Id) )){
+                
+                return RedirectToAction("Index","Usuario"); 
+            }else
+            {
+                Activos_Inactivos nuevo = new Activos_Inactivos();
+                try
+                {
+                    nuevo.Activos = _repClientes.ClientesActivos();
+                    nuevo.Inactivos = _repClientes.ClientesInactivos();
+                }
+                catch (System.Exception e)
+                {
+                    
+                    _logger.LogError(e.ToString());
+                    return RedirectToAction("Index","Error");
+                }
+                return View("Activos_Inactivos", _mapper.Map<Cliente_Activos_InactivosViewModel>(nuevo));
+
+            }
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
