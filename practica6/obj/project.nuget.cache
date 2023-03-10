@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jghf4kis2d4C8oztej/+qC6zr396Z96pDLllcRxZ+Defffy2pXDuhhh426Rm8jEjWS4e8F/XOE74brN8REfy9Q==",
+  "dgSpecHash": "aFnmtEumsITknMlaVUZAgmnNnez5Gb24GYt/9pKExITmJ/l9wGxB3s6NNsuDRZ1JAPd/a3sigj8ghGxp5/Idig==",
   "success": true,
-  "projectFilePath": "d:\\2docuat\\taller 2\\practica6\\practica\\practica6\\practica6.csproj",
+  "projectFilePath": "D:\\2docuat\\taller 2\\practica6\\practica\\practica6\\practica6.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WINDOWS\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\WINDOWS\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

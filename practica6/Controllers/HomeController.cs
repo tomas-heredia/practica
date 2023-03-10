@@ -1,6 +1,9 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using practica6.Models;
+using practica.Controllers;
+
+
 
 namespace practica6.Controllers;
 
@@ -13,11 +16,24 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+     public IActionResult Index()
     {
-        return View();
+        if (string.IsNullOrEmpty(HttpContext.Session.GetString(UsuarioController.Usuario_UserName)) 
+        && string.IsNullOrEmpty(HttpContext.Session.GetString(UsuarioController.Usuario_Id) )){
+            return RedirectToAction("Index","Usuario"); 
+        }else
+        {
+            return View();
+            
+        }
     }
-
+    [HttpPost]
+    public IActionResult IndexCliente(){
+       
+            
+           
+        return RedirectToAction("Cargar","Cliente");
+    }
     public IActionResult Privacy()
     {
         return View();

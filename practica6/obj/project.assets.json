@@ -4419,11 +4419,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\2docuat\\taller 2\\practica6\\practica\\practica6\\practica6.csproj",
+      "projectUniqueName": "D:\\2docuat\\taller 2\\practica6\\practica\\practica6\\practica6.csproj",
       "projectName": "practica6",
-      "projectPath": "d:\\2docuat\\taller 2\\practica6\\practica\\practica6\\practica6.csproj",
+      "projectPath": "D:\\2docuat\\taller 2\\practica6\\practica\\practica6\\practica6.csproj",
       "packagesPath": "C:\\Users\\WINDOWS\\.nuget\\packages\\",
-      "outputPath": "d:\\2docuat\\taller 2\\practica6\\practica\\practica6\\obj\\",
+      "outputPath": "D:\\2docuat\\taller 2\\practica6\\practica\\practica6\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\WINDOWS\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -12,6 +12,7 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddControllersWithViews();
 // Para repositorio  (inyección de dependencia para el repositorio)
 builder.Services.AddTransient<IRepoCliente, RepoCliente>();
+builder.Services.AddTransient<IRepoUsuario, RepoUsuario>();
 
 //para cookies
 builder.Services.AddDistributedMemoryCache();
